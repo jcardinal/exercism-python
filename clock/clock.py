@@ -17,10 +17,7 @@ class Clock:
         return f"{self.hour:02}" + ":" + f"{self.minute:02}"
 
     def __eq__(self, other):
-        if self.hour == other.hour and self.minute == other.minute:
-            return True
-        else:
-            return False
+        return self.hour == other.hour and self.minute == other.minute
 
     def __add__(self, minutes):
         return Clock(self.hour, self.minute + minutes)
